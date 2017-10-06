@@ -166,3 +166,7 @@
 2017/10/05 12:29:35 [emerg] 18425#0: "server" directive is not allowed here in /home/taran/nginx/conf/vhosts/backend.conf:1
 2017/10/05 12:32:38 [emerg] 18577#0: "server" directive is not allowed here in /home/taran/nginx/conf/vhosts/backend.conf:1
 2017/10/05 12:33:44 [emerg] 18757#0: "server" directive is not allowed here in /home/taran/nginx/conf/vhosts/backend.conf:1
+2017/10/06 05:08:08 [emerg] 3680#0: "server" directive is not allowed here in /home/taran/nginx/conf/vhosts/backend.conf:1
+2017/10/06 05:10:53 [emerg] 3825#0: vhost_traffic_status: "ngx_http_vhost_traffic_status" is already bound to key in /home/taran/nginx/conf/nginx.conf:45
+2017/10/06 05:11:45 [error] 3839#0: *1 open() "/home/taran/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.122.102, server: 192.168.122.102, request: "GET /favicon.ico HTTP/1.1", host: "192.168.122.102:8080"
+2017/10/06 05:11:45 [error] 3839#0: *1 open() "/home/taran/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.122.102, server: 192.168.122.102, request: "GET /favicon.ico HTTP/1.1", host: "192.168.122.102:8080"
