@@ -20,18 +20,14 @@ http {
     include       mime.types;
     # anything written in /opt/nginx/conf/mime.types is interpreted as if written inside the http { } block
     
-   # default_type  application/octet-stream;
+    default_type  application/octet-stream;
     #
-    include /home/taran/nginx/conf/vhosts/lb.conf;
+    include /home/taran/nginx/conf/vhosts/backend.conf;
     #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
     #                  '$status $body_bytes_sent "$http_referer" '
     #                  '"$http_user_agent" "$http_x_forwarded_for"';
-    include /home/taran/nginx/conf/upstreams/web.conf;
+
     #access_log  logs/access.log  main;
-    #upstream backend{
-    #	server 192.168.122.102:8080 weight=3;
-    #	server 192.168.122.103:8080 weight=1;
-    #    }
 
     sendfile        on;
     # If serving locally stored static files, sendfile is essential to speed up the server,
@@ -39,15 +35,16 @@ http {
     
     #tcp_nopush     on;
     # works opposite to tcp_nodelay. Instead of optimizing delays, it optimizes the amount of data sent at once.
-    # include /home/taran/nginx/conf/upstreams/web.conf;	
+
     #keepalive_timeout  0;
     keepalive_timeout  65;
     # timeout during which a keep-alive client connection will stay open.
 
     #gzip  on;
     # tells the server to use on-the-fly gzip compression.
-     vhost_traffic_status_zone;
-	
+	vhost_traffic_status_zone;
+    
+
 
     # another virtual host using mix of IP-, name-, and port-based configuration
     #
@@ -83,5 +80,3 @@ http {
     #        index  index.html index.htm;
     #    }
     #}
-
-}
